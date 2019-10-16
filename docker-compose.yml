@@ -1,0 +1,31 @@
+weba:
+  build: .
+  expose:
+    - 8000
+
+webb:
+  build: .
+  expose:
+    - 8000
+webc:
+  build: .
+  expose:
+    - 8000
+
+haproxy:
+  image: dockercloud/haproxy
+  volumes:
+   - /var/run/docker.sock:/var/run/docker.sock
+  links:
+   - weba
+   - webb
+   - webc
+  ports:
+   - "80:80" #when you press localhost it will goes to haproxy container ,and then this container direct the traffic 
+              #to the web1 web2 web3 this is why we bind the port frontend balancer in haproxy.cfg and its work on80and443
+                                                                  #bind 0.0.0.0:80
+   - "70:70"
+
+  expose:
+   - "80"
+   - "70"

@@ -1,0 +1,32 @@
+{
+  "name": "comics-geek",
+  "version": "1.0.0",
+  "description": "A Simple REST API for getting random Comic strip for C&H, Dilbert & Garfield",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beingadityak/comics-geek.git"
+  },
+  "keywords": [
+    "node-js",
+    "express",
+    "cheerio",
+    "request",
+    "web-scraping"
+  ],
+  "author": "beingadityak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beingadityak/comics-geek/issues"
+  },
+  "homepage": "https://github.com/beingadityak/comics-geek#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.1",
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  }
+}
